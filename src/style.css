@@ -1,9 +1,11 @@
 @import url('https://fonts.cdnfonts.com/css/sf-pro-display');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 body {
   font-size: 14px;
   font-family: 'SF Pro Display', sans-serif;
   color: #fff;
+  min-width: 320px;
 }
 
 div * {
@@ -18,9 +20,14 @@ h3 {
   min-height: 100vh;
   background: url(../src/assets/images/bg.jpeg) top center no-repeat;
   background-size: cover;
-  padding: 0 24px;
+  padding: 30px 24px;
   max-width: 500px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  box-sizing: border-box;
+  position: relative;
 }
 
 .title {
@@ -36,7 +43,7 @@ h3 {
 .features {
   margin-bottom: 50px;
   display: flex;
-  gap: 10px;
+  gap: 14px;
 }
 
 .features__item {
@@ -181,7 +188,8 @@ h3 {
   box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.5);
   padding: 3px 22px;
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: 500;
+  font-family: 'Roboto', sans-serif;
 }
 
 .cross-icon {
@@ -189,5 +197,7 @@ h3 {
   width: 12px;
   height: 12px;
   display: inline-block;
-  margin-bottom: 14%;
+  position: absolute;
+  top: 72px;
+  left: 24px;
 }

@@ -6,34 +6,36 @@
     <title>Arta</title>
   </head>
   <body>
-    <section class="wrapper">
+    <main class="wrapper">
       <a href="#" class="cross-icon"></a>
       <div class="title">Get Unlimited Access</div>
 
-      <div class="features">
+      <section class="features">
         <div class="features__item">
           <img
-            src="../src/assets/images/features-1.png"
+            src="<%=require('./assets/images/features-1.png')%>"
             srcset="
-              ../src/assets/images/features-1@2x.png 2x,
-              ../src/assets/images/features-1@3x.png 3x
+              <%=require('./assets/images/features-1@2x.png')%> 2x,
+              <%=require('./assets/images/features-1@3x.png')%> 3x
             "
             alt="Unlimited Art Creation"
             class="features__img"
           />
+
           <div class="features__title">Unlimited Art Creation</div>
         </div>
 
         <div class="features__item">
           <img
-            src="../src/assets/images/features-2.png"
+            src="<%=require('./assets/images/features-2.png')%>"
             srcset="
-              ../src/assets/images/features-2@2x.png 2x,
-              ../src/assets/images/features-2@3x.png 3x
+              <%=require('./assets/images/features-2@2x.png')%> 2x,
+              <%=require('./assets/images/features-2@3x.png')%> 3x
             "
-            alt="Unlimited Art Creation"
+            alt="Exclusive Styles"
             class="features__img"
           />
+
           <div class="features__title">
             Exclusive<br />
             Styles
@@ -42,20 +44,21 @@
 
         <div class="features__item">
           <img
-            src="../src/assets/images/features-3.png"
+            src="<%=require('./assets/images/features-3.png')%>"
             srcset="
-              ../src/assets/images/features-3@1.5x.svg 1.5x,
-              ../src/assets/images/features-3@2x.png   2x,
-              ../src/assets/images/features-3@3x.png   3x
+              <%=require('./assets/images/features-3@1.5x.svg')%> 1.5x,
+              <%=require('./assets/images/features-3@2x.png')%>   2x,
+              <%=require('./assets/images/features-3@3x.png')%>   3x
             "
-            alt="Unlimited Art Creation"
+            alt="Magic Avatars"
             class="features__img"
           />
+
           <div class="features__title">Magic Avatars With 20% Off</div>
         </div>
-      </div>
+      </section>
 
-      <div class="form">
+      <section class="form">
         <div class="selectors">
           <div class="radio-line">
             <input
@@ -96,8 +99,8 @@
             </div>
           </div>
         </div>
-        <button id="continueBtn" class="button">Continue</button>
-      </div>
+        <button id="continueBtn" type="button" class="button">Continue</button>
+      </section>
 
       <nav class="nav">
         <ul class="nav__list">
@@ -112,6 +115,6 @@
           </li>
         </ul>
       </nav>
-    </section>
+    </main>
   </body>
 </html>
