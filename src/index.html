@@ -8,53 +8,52 @@
   <body>
     <main class="wrapper">
       <a href="#" class="cross-icon"></a>
-      <div class="title">Get Unlimited Access</div>
+      <div class="title i18n">Get Unlimited <br />Access</div>
 
       <section class="features">
         <div class="features__item">
           <img
-            src="<%=require('./assets/images/features-1.png')%>"
+            src="<%=require('./assets/images/features-1.jpg')%>"
             srcset="
-              <%=require('./assets/images/features-1@2x.png')%> 2x,
-              <%=require('./assets/images/features-1@3x.png')%> 3x
+              <%=require('./assets/images/features-1@2x.jpg')%> 2x,
+              <%=require('./assets/images/features-1@3x.jpg')%> 3x
             "
             alt="Unlimited Art Creation"
             class="features__img"
           />
 
-          <div class="features__title">Unlimited Art Creation</div>
+          <div class="features__title i18n">Unlimited Art <br />Creation</div>
         </div>
 
         <div class="features__item">
           <img
-            src="<%=require('./assets/images/features-2.png')%>"
+            src="<%=require('./assets/images/features-2.jpg')%>"
             srcset="
-              <%=require('./assets/images/features-2@2x.png')%> 2x,
-              <%=require('./assets/images/features-2@3x.png')%> 3x
+              <%=require('./assets/images/features-2@2x.jpg')%> 2x,
+              <%=require('./assets/images/features-2@3x.jpg')%> 3x
             "
             alt="Exclusive Styles"
             class="features__img"
           />
 
-          <div class="features__title">
-            Exclusive<br />
-            Styles
-          </div>
+          <div class="features__title i18n">Exclusive <br />Styles</div>
         </div>
 
         <div class="features__item">
           <img
-            src="<%=require('./assets/images/features-3.png')%>"
+            src="<%=require('./assets/images/features-3.jpg')%>"
             srcset="
-              <%=require('./assets/images/features-3@1.5x.svg')%> 1.5x,
-              <%=require('./assets/images/features-3@2x.png')%>   2x,
-              <%=require('./assets/images/features-3@3x.png')%>   3x
+              <%=require('./assets/images/features-3@1.5x.jpg')%> 1.5x,
+              <%=require('./assets/images/features-3@2x.jpg')%>   2x,
+              <%=require('./assets/images/features-3@3x.jpg')%>   3x
             "
             alt="Magic Avatars"
             class="features__img"
           />
 
-          <div class="features__title">Magic Avatars With 20% Off</div>
+          <div class="features__title i18n">
+            Magic Avatars <br />With 20% Off
+          </div>
         </div>
       </section>
 
@@ -70,15 +69,18 @@
             />
             <div class="selectors__item">
               <div class="selectors__item-l">
-                <div class="selectors__tariff">Yearly access</div>
-                <div class="selectors__tariff-info">Just $39.99 per year</div>
+                <div class="selectors__tariff i18n">YEARLY ACCESS</div>
+                <div class="selectors__tariff-info i18n">
+                  Just {{price}} per year
+                </div>
               </div>
               <div class="selectors__item-r">
-                <div class="selectors__item-price">$0.48</div>
-                <div class="selectors__item-label">per week</div>
+                <div class="selectors__item-price i18n">
+                  {{price}} <br />per week
+                </div>
               </div>
             </div>
-            <span class="best-offer-label">best offer</span>
+            <span class="best-offer-label i18n">BEST OFFER</span>
           </div>
 
           <div class="radio-line">
@@ -90,28 +92,31 @@
             />
             <div class="selectors__item">
               <div class="selectors__item-l">
-                <div class="selectors__tariff">Weekly access</div>
+                <div class="selectors__tariff i18n">WEEKLY ACCESS</div>
               </div>
               <div class="selectors__item-r">
-                <div class="selectors__item-price">$6.99</div>
-                <div class="selectors__item-label">per week</div>
+                <div class="selectors__item-price i18n">
+                  {{price}} <br />per week
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <button id="continueBtn" type="button" class="button">Continue</button>
+        <button id="continueBtn" type="button" class="button i18n">
+          Continue
+        </button>
       </section>
 
       <nav class="nav">
         <ul class="nav__list">
           <li class="nav__item">
-            <a href="#" class="nav__link">Terms of Use</a>
+            <a href="#" class="nav__link i18n">Terms of Use</a>
           </li>
           <li class="nav__item">
-            <a href="#" class="nav__link">Privacy Policy</a>
+            <a href="#" class="nav__link i18n">Privacy Policy</a>
           </li>
           <li class="nav__item">
-            <a href="#" class="nav__link">Restore</a>
+            <a href="#" class="nav__link i18n">Restore</a>
           </li>
         </ul>
       </nav>

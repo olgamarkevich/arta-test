@@ -18,7 +18,13 @@ h3 {
 
 .wrapper {
   min-height: 100vh;
-  background: url(../src/assets/images/bg.jpeg) top center no-repeat;
+  background-image: image-set(
+    '../src/assets/images/bg.jpg' 1x,
+    '../src/assets/images/bg@2x.jpg' 2x,
+    '../src/assets/images/bg@3x.jpg' 3x
+  );
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
   padding: 30px 24px;
   max-width: 500px;
@@ -41,7 +47,7 @@ h3 {
 }
 
 .features {
-  margin-bottom: 50px;
+  margin-bottom: 6vh;
   display: flex;
   gap: 14px;
 }
@@ -65,6 +71,7 @@ h3 {
 
 .features__item .features__img {
   width: 100%;
+  border-radius: 12px;
 }
 
 .features__item > * {
@@ -79,6 +86,7 @@ h3 {
   justify-content: center;
   flex-wrap: wrap;
   list-style: none;
+  align-items: center;
 }
 
 .nav .nav__list .nav__link {
@@ -95,7 +103,7 @@ h3 {
 }
 
 .form {
-  margin-bottom: 44px;
+  margin-bottom: 5.23vh;
 }
 
 .button {
