@@ -1,7 +1,7 @@
 import 'normalize.css';
 import './style.css';
 
-const getAccess = () => {
+const initButtons = () => {
   const continueBtn = document.getElementById('continueBtn');
 
   continueBtn.addEventListener('click', function () {
@@ -9,6 +9,10 @@ const getAccess = () => {
     const link = radio.getAttribute('data-link');
     window.location.href = link;
   });
+};
+
+const i18nParams = {
+  price: '9.99$',
 };
 
 const initI18n = () => {
@@ -61,20 +65,49 @@ const initI18n = () => {
     }
   }
 
-  localize(locale);
+  const normalizedLocale = {};
+
+  for (const key in locale) {
+    normalizedLocale[normalizeKey(key)] = locale[key];
+  }
+
+  localize(normalizedLocale);
 };
 
 const localize = (locale) => {
-  const allI18nEL = document.querySelectorAll('.i18n');
-  const navHeight = document.querySelector('.nav').clientHeight;
-  console.log(navHeight);
-  allI18nEL.forEach((item) => {
-    item.innerHTML = locale[item.innerHTML.trim()];
-    if (navHeight !== document.querySelector('.nav').clientHeight) {
-      document.querySelector('.nav').classList.add('minFZ');
+  const i18nElements = document.querySelectorAll('.i18n');
+
+  i18nElements.forEach((item) => {
+    const initialItemHeight = item.clientHeight;
+
+    item.innerHTML = insertParams(locale[normalizeKey(item.innerHTML)]);
+
+    if (item.clientHeight > initialItemHeight) {
+      item.classList.add('scale-text');
     }
   });
 };
 
+const normalizeKey = (str) => str.replace(/\s*</i, '<').trim();
+
+const insertParams = (str) => {
+  const params = str.match(/\{\{.*\}\}/g);
+
+  if (params === null) {
+    return str;
+  }
+
+  params.forEach((param) => {
+    const paramKey = param.replace(/[{}]/g, '');
+    const paramValue = i18nParams[paramKey];
+
+    if (paramValue) {
+      str = str.replace(`{{${paramKey}}}`, paramValue);
+    }
+  });
+
+  return str;
+};
+
 initI18n();
-getAccess();
+initButtons();
