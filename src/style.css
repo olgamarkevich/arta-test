@@ -1,11 +1,17 @@
-@import url('https://fonts.cdnfonts.com/css/sf-pro-display');
+/* @import url('https://fonts.cdnfonts.com/css/sf-pro-display'); */
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+html {
+  height: 100%;
+}
 
 body {
   font-size: 14px;
-  font-family: 'SF Pro Display', sans-serif;
+  font-family: -apple-system;
+  /* font-family: 'SF Pro Display', sans-serif; */
   color: #fff;
   min-width: 320px;
+  height: 100%;
 }
 
 div * {
@@ -17,7 +23,7 @@ h3 {
 }
 
 .wrapper {
-  min-height: 100vh;
+  height: 100%;
   background-image: image-set(
     '../src/assets/images/bg.jpg' 1x,
     '../src/assets/images/bg@2x.jpg' 2x,
@@ -98,8 +104,20 @@ h3 {
   letter-spacing: 0.577px;
 }
 
+.nav.minFZ .nav__list .nav__link {
+  font-size: 11px;
+}
+
 .nav .nav__list .nav__item:not(:last-child) {
   margin-right: 32px;
+}
+
+.nav.minFZ {
+  margin: 0 -15px;
+}
+
+.nav.minFZ .nav__list .nav__item:not(:last-child) {
+  margin-right: 15px;
 }
 
 .form {
@@ -118,6 +136,13 @@ h3 {
   border-radius: 32px;
   font-weight: 500;
   cursor: pointer;
+  color: #070b33;
+}
+
+@media (pointer: none) {
+  button:focus {
+    opacity: 0.8;
+  }
 }
 
 .selectors__item {
@@ -147,6 +172,7 @@ h3 {
 
 .selectors__item-l {
   width: calc(100% - 102px);
+  padding-right: 10px;
 }
 
 .selectors__item-r {

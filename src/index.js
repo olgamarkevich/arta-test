@@ -1,13 +1,15 @@
 import 'normalize.css';
 import './style.css';
 
-const continueBtn = document.getElementById('continueBtn');
+const getAccess = () => {
+  const continueBtn = document.getElementById('continueBtn');
 
-continueBtn.addEventListener('click', function () {
-  const radio = document.querySelector('.radio-input:checked');
-  const link = radio.getAttribute('data-link');
-  window.location.href = link;
-});
+  continueBtn.addEventListener('click', function () {
+    const radio = document.querySelector('.radio-input:checked');
+    const link = radio.getAttribute('data-link');
+    window.location.href = link;
+  });
+};
 
 const initI18n = () => {
   /* Supported locales */
@@ -64,9 +66,15 @@ const initI18n = () => {
 
 const localize = (locale) => {
   const allI18nEL = document.querySelectorAll('.i18n');
+  const navHeight = document.querySelector('.nav').clientHeight;
+  console.log(navHeight);
   allI18nEL.forEach((item) => {
     item.innerHTML = locale[item.innerHTML.trim()];
+    if (navHeight !== document.querySelector('.nav').clientHeight) {
+      document.querySelector('.nav').classList.add('minFZ');
+    }
   });
 };
 
 initI18n();
+getAccess();
