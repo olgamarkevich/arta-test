@@ -1,4 +1,4 @@
-/* @import url('https://fonts.cdnfonts.com/css/sf-pro-display'); */
+@import url('https://fonts.cdnfonts.com/css/sf-pro-display');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 html {
@@ -7,8 +7,7 @@ html {
 
 body {
   font-size: 14px;
-  font-family: -apple-system;
-  /* font-family: 'SF Pro Display', sans-serif; */
+  font-family: 'SF Pro Display', sans-serif;
   color: #fff;
   min-width: 320px;
   height: 100%;
