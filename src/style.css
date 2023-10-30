@@ -222,7 +222,7 @@ h3 {
 
 .best-offer-label {
   position: absolute;
-  top: -12px;
+  top: -14px;
   right: 25px;
   color: #141131;
   border-radius: 10px;
@@ -265,5 +265,11 @@ h3 {
   }
   .cross-icon {
     top: 30px;
+  }
+  .title {
+    margin-bottom: 20px;
+  }
+  .features {
+    margin-bottom: 4vh;
   }
 }

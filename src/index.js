@@ -29,6 +29,7 @@ const initI18n = () => {
   };
 
   const localeTags = Object.keys(locales);
+
   let locale = locales[defaultLocaleTag];
 
   /* URL param locale */
@@ -50,9 +51,13 @@ const initI18n = () => {
       ? navigator.languages
       : [...navigator?.language];
 
+    const splittedLocaleTags = browserLocaleTags.map(
+      (tag) => tag.split('-')[0]
+    );
+
     let browserLocaleTag = null;
 
-    browserLocaleTags.forEach((lang) => {
+    splittedLocaleTags.forEach((lang) => {
       if (browserLocaleTag === null) {
         if (localeTags.includes(lang)) {
           browserLocaleTag = lang;
@@ -61,7 +66,7 @@ const initI18n = () => {
     });
 
     if (browserLocaleTag !== null && browserLocaleTag !== defaultLocaleTag) {
-      locale = locales['browserLocaleTag'];
+      locale = locales[browserLocaleTag];
     }
   }
 
@@ -81,7 +86,7 @@ const localize = (locale) => {
   i18nElements.forEach((item) => {
     const initialItemHeight = item.clientHeight;
 
-    item.innerHTML = insertParams(locale[normalizeKey(item.innerHTML)]);
+    item.innerHTML = insertParams(locale[normalizeKey(item.innerHTML)] || '');
 
     if (item.clientHeight > initialItemHeight) {
       item.classList.add('scale-text');
