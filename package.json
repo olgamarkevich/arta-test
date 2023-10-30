@@ -11,6 +11,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "autoprefixer": "^10.4.16",
     "css-loader": "^6.8.1",
     "html-webpack-plugin": "^5.5.3",
     "postcss": "^8.4.31",
@@ -21,16 +22,10 @@
     "webpack-dev-server": "^4.15.1"
   },
   "dependencies": {
-    "autoprefixer": "^10.4.16",
     "normalize.css": "^8.0.1"
   },
-  "postcss": {
-    "plugins": {
-      "autoprefixer": {}
-    }
-  },
   "browserslist": [
-    "last 5 version",
+    "last 50 version",
     "not dead",
     "iOS >= 9"
   ]

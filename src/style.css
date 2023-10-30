@@ -246,7 +246,8 @@ h3 {
 
 @media (hover: hover) and (pointer: fine) {
   .button,
-  .nav .nav__list .nav__link {
+  .nav .nav__list .nav__link,
+  .cross-icon {
     opacity: 0.7;
   }
 }
