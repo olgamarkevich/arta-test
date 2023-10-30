@@ -274,3 +274,18 @@ h3 {
     margin-bottom: 4vh;
   }
 }
+
+@media screen and (max-height: 600px) {
+  .form {
+    margin-bottom: 15px;
+  }
+  .title {
+    font-size: 35px;
+  }
+  .title.scale-text {
+    font-size: 35px;
+  }
+  .cross-icon {
+    top: 20px;
+  }
+}
