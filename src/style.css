@@ -51,6 +51,10 @@ h3 {
   font-weight: 800;
 }
 
+.title.scale-text {
+  margin-bottom: 20px;
+}
+
 .features {
   margin-bottom: 6vh;
   display: flex;
@@ -170,6 +174,10 @@ h3 {
   font-weight: 400;
 }
 
+.selectors__tariff.scale-text {
+  font-size: 14px;
+}
+
 .selectors__item-l {
   width: calc(100% - 102px);
   padding-right: 10px;
@@ -234,4 +242,28 @@ h3 {
   position: absolute;
   top: 72px;
   left: 24px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .button,
+  .nav .nav__list .nav__link {
+    opacity: 0.7;
+  }
+}
+
+@media screen and (max-height: 700px) {
+  .selectors__tariff.scale-text {
+    font-size: 13px;
+  }
+
+  .form {
+    margin-bottom: 25px;
+  }
+  .wrapper {
+    padding: 15px 24px;
+    background-position: center -40px;
+  }
+  .cross-icon {
+    top: 30px;
+  }
 }

@@ -76,6 +76,7 @@ const initI18n = () => {
 
 const localize = (locale) => {
   const i18nElements = document.querySelectorAll('.i18n');
+  const navHeight = document.querySelector('.nav').clientHeight;
 
   i18nElements.forEach((item) => {
     const initialItemHeight = item.clientHeight;
@@ -84,6 +85,10 @@ const localize = (locale) => {
 
     if (item.clientHeight > initialItemHeight) {
       item.classList.add('scale-text');
+    }
+
+    if (navHeight !== document.querySelector('.nav').clientHeight) {
+      document.querySelector('.nav').classList.add('minFZ');
     }
   });
 };
