@@ -1,5 +1,5 @@
 # Тестовое задание Arta
-
+[Deploy](https://olgamarkevich.github.io/arta-test)
 ## Скрипты package.json:
 
 | Скрипт | Назначение | Команда |
